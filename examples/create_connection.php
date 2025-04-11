@@ -10,5 +10,5 @@ $connectionId = QubeSync::createConnection(function ($connectionId) {
     echo "Connection created with ID: $connectionId\n";
 });
 
-$response = QubeSync::get("connections/$connectionId");
+$response = QubeSync::getConnection($connectionId);
 print_r($response);

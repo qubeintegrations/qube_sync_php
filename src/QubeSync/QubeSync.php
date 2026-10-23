@@ -123,9 +123,20 @@ class QubeSync
     {
         $parts = explode(",", $header);
         $ts = explode("=", array_shift($parts));
+        
+        // collect all signatures into $signatures
+        $signatures = [];
+        foreach ($parts as $part) {
+            $sig = explode("=", $part);
+            if (count($sig) === 2) {
+                $signatures[$sig[0]] = $sig[1];
+            }
+        }
+
+
         return [
             'timestamp' => (int) $ts[1],
-            'signatures' => $parts,
+            'signatures' => $signatures,
         ];
     }
 
@@ -181,7 +192,7 @@ class QubeSync
         return $secret;
     }
 
-    private static function signPayload($payload)
+    public static function signPayload($payload)
     {
         return hash_hmac('sha256', $payload, self::apiSecret());
     }

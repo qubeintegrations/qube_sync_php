@@ -1,0 +1,1 @@
+{"version":1,"defects":{"QubeSyncTest::testSomething":5,"QubeSyncTest::testValidWebhookSignature":5,"QubeSyncTest::testExpiredTimestamp":5,"QubeSyncTest::testInvalidSignature":5},"times":{"QubeSyncTest::testSomething":0,"QubeSyncTest::testValidWebhookSignature":0,"QubeSyncTest::testExpiredTimestamp":0,"QubeSyncTest::testInvalidSignature":0.002}}

@@ -1,6 +1,7 @@
 {
     "name": "qubeintegrations/qube_sync_php",
-    "description": "PHP wrapper for the QubeSync API",
+    "description": "Unsupported proof of concept of a PHP wrapper for the QubeSync API. Don't use it to verify webhooks.",
+    "abandoned": true,
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -16,5 +17,13 @@
         "psr-4": {
           "QubeSync\\": "src/QubeSync/"
         }
-      }
+      },
+    "autoload-dev": {
+        "psr-4": {
+          "QubeSync\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.1"
+    }
 }
